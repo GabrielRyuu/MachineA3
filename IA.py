@@ -12,18 +12,18 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_california_housing
 
 data = fetch_california_housing(as_frame=True)
-df = data.frame  # Transformar em DataFrame para facilitar a manipulação
+df = data.frame  
 
 
 print(df.head())
 print(df.describe())
 
 
-print(df.isnull().sum())  # Aqui você deve usar df, não data
+print(df.isnull().sum()) 
 
 
 
-(df["MedHouseVal"] * 100000).hist(bins=50)  # Multiplicar os valores por 100,000
+(df["MedHouseVal"] * 100000).hist(bins=50)  
 plt.xlabel("Valor Médio das Casas (em dólares)")
 plt.ylabel("Número de Bairros")
 plt.title("Distribuição do Valor Médio das Casas na Califórnia")
